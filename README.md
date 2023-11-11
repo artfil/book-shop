@@ -1,0 +1,1 @@
+app demo for using graphql and spring boot
