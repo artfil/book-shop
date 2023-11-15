@@ -10,7 +10,7 @@ spring:
   application.name: book-shop
   graphql.graphiql.enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5430/book_shop
+    url: jdbc:postgresql://localhost:5432/book_shop
     username: postgres
     password: password
   liquibase:
