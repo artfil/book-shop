@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1"
+      author: Filimonov Artem
+      comment: "create table author"
+      changes:
+        - sqlFile:
+            path: db/changelog/1/create-table-author.sql
+
+  - changeSet:
+      id: "2"
+      author: Filimonov Artem
+      comment: "create table book"
+      changes:
+        - sqlFile:
+            path: db/changelog/1/create-table-book.sql
+
+  - changeSet:
+      id: "3"
+      author: Filimonov Artem
+      comment: "create table author_book"
+      changes:
+        - sqlFile:
+            path: db/changelog/1/create-table-author-book.sql
+
+  - changeSet:
+      id: "4"
+      author: Filimonov Artem
+      comment: "create table sequences"
+      changes:
+        - sqlFile:
+            path: db/changelog/1/create-sequences.sql

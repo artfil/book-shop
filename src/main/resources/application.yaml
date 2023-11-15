@@ -1,1 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
 
+spring:
+  application.name: book-shop
+  graphql.graphiql.enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5430/book_shop
+    username: postgres
+    password: password
+  liquibase:
+    change-log: classpath:/db/changelog/.master/db.changelog-master.yaml
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

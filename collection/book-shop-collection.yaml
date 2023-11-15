@@ -1,0 +1,220 @@
+_type: export
+__export_format: 4
+__export_date: 2023-11-15T13:53:35.037Z
+__export_source: insomnia.desktop.app:v2023.5.5
+resources:
+  - _id: req_01c4589cf7944fda962c97465a35fe40
+    parentId: fld_ac15693dc5cf4c06a73940c733dcd0f7
+    modified: 1700056227217
+    created: 1699883425447
+    url: "{{ _['base-path'] }}"
+    name: createAuthor1
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation createAuthor1 {\n\tcreateAuthor(name: \"author_1\",
+        books: [{ title: \"book_1\" }]) {\n\t\tid\n\t\tname\n\t\tbooks
+        {\n\t\t\tid\n\t\t\ttitle\n\t\t}\n\t}\n}\n","operationName":"createAuthor1","variables":{}}'
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.5
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1699899622942.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_ac15693dc5cf4c06a73940c733dcd0f7
+    parentId: wrk_d76cb186e42d476586b8469cfb7f5402
+    modified: 1700056177598
+    created: 1700056177598
+    name: book-shop
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1700056177598
+    _type: request_group
+  - _id: wrk_d76cb186e42d476586b8469cfb7f5402
+    parentId: null
+    modified: 1699883417621
+    created: 1699883417621
+    name: Book-Shop
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_2cab254151f44993ba016c90c74105c2
+    parentId: fld_ac15693dc5cf4c06a73940c733dcd0f7
+    modified: 1700056220176
+    created: 1699905961163
+    url: "{{ _['base-path'] }}"
+    name: createAuthor2
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation createAuthor2 {\n\tcreateAuthor(\n\t\tname:
+        \"author_2\"\n\t\tbooks: [{ id: 1, title: \"book_1\" }, { title:
+        \"book_2\" }]\n\t) {\n\t\tid\n\t\tname\n\t\tbooks
+        {\n\t\t\tid\n\t\t\ttitle\n\t\t}\n\t}\n}\n","operationName":"createAuthor2"}'
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.5
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1699899622992.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cc526a1a21314eebbcbede3d24851cc9
+    parentId: fld_ac15693dc5cf4c06a73940c733dcd0f7
+    modified: 1700056250391
+    created: 1699906125514
+    url: "{{ _['base-path'] }}"
+    name: getAllBooks
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query getAllBooks {\n\tgetAllBooks
+        {\n\t\tid\n\t\ttitle\n\t\tauthors
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t}\n}\n","operationName":"getAllBooks"}'
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.5
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1699899622955.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9c148b2232534a1ea0edc8d0711fca59
+    parentId: fld_ac15693dc5cf4c06a73940c733dcd0f7
+    modified: 1700056252918
+    created: 1699906316345
+    url: "{{ _['base-path'] }}"
+    name: getAuthorByName
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query getAuthorByName {\n\tgetAuthorByName(name: \"author_2\")
+        {\n\t\tid\n\t\tname\n\t\tbooks
+        {\n\t\t\tid\n\t\t\ttitle\n\t\t}\n\t}\n}\n","operationName":"getAuthorByName"}'
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.5
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1699899622961.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b61631ea9e3d4168b2937b6d6e6fd47f
+    parentId: fld_ac15693dc5cf4c06a73940c733dcd0f7
+    modified: 1700056268137
+    created: 1699906390622
+    url: "{{ _['base-path'] }}"
+    name: getBooksByAuthor
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query getBooksByAuthor {\n\tgetBooksByAuthor(authorId: \"1\")
+        {\n\t\tid\n\t\ttitle\n\t\tauthors
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t}\n}\n","operationName":"getBooksByAuthor"}'
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.5
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1699899622975.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7de06a86cef34ee6bf55d635e02f7cf2
+    parentId: fld_ac15693dc5cf4c06a73940c733dcd0f7
+    modified: 1700056266492
+    created: 1700053123683
+    url: "{{ _['base-path'] }}"
+    name: createBook
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation createBook {\n\tcreateBook(\n\t\ttitle:
+        \"book_3\"\n\t\tauthors: [{ id: 2, name: \"author_2\" }, { name:
+        \"author_3\" }]\n\t) {\n\t\tid\n\t\ttitle\n\t\tauthors
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t}\n}\n","operationName":"createBook"}'
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: Insomnia/2023.5.5
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1699899622986.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_b67410df529983a20347af5be186d63ecbde4fee
+    parentId: wrk_d76cb186e42d476586b8469cfb7f5402
+    modified: 1700045890603
+    created: 1699883417624
+    name: Base Environment
+    data:
+      base-path: http://localhost:8080/graphql
+    dataPropertyOrder:
+      "&":
+        - base-path
+    color: null
+    isPrivate: false
+    metaSortKey: 1699883417624
+    _type: environment
+  - _id: jar_b67410df529983a20347af5be186d63ecbde4fee
+    parentId: wrk_d76cb186e42d476586b8469cfb7f5402
+    modified: 1699883417626
+    created: 1699883417626
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
