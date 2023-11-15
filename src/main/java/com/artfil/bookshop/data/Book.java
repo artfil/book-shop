@@ -29,14 +29,7 @@ public class Book {
     @Size(max = 255)
     private String title;
 
-    @ManyToMany
-    @JoinTable(
-            name = "author_book",
-            joinColumns = @JoinColumn(name = "book_id"),
-            inverseJoinColumns = @JoinColumn(name = "author_id"),
-            foreignKey = @ForeignKey(name = "book.id"),
-            inverseForeignKey = @ForeignKey(name = "author.id"),
-            uniqueConstraints = @UniqueConstraint(columnNames = {"author_id", "book_id"}))
+    @ManyToMany(mappedBy = "books")
     @JsonIgnoreProperties("books")
     @Builder.Default
     private Set<Author> authors = new HashSet<>();

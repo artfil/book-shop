@@ -32,10 +32,7 @@ public class Author {
     @JoinTable(
             name = "author_book",
             joinColumns = @JoinColumn(name = "author_id"),
-            inverseJoinColumns = @JoinColumn(name = "book_id"),
-            foreignKey = @ForeignKey(name = "author.id"),
-            inverseForeignKey = @ForeignKey(name = "book.id"),
-            uniqueConstraints = @UniqueConstraint(columnNames = {"author_id", "book_id"}))
+            inverseJoinColumns = @JoinColumn(name = "book_id"))
     @JsonIgnoreProperties("authors")
     @Builder.Default
     private Set<Book> books = new HashSet<>();
